@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Form from "./components/Form/index";
+import hero from "./assets/6 SCENE.svg";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
+      <section className="hero-section">
+        <img src={hero} alt="img principal" id="hero" />
+      </section>
+      <section className="form-section">
+        <h1 className="title">Sign Up</h1>
+        <p className="subtitle">
+          Get started with us today! Create your account by
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <p className="subtitle" id="sub">
+          filling out the information below.
+        </p>
+        <Form />
+      </section>
     </div>
   );
 }

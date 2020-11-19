@@ -1,38 +1,87 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html, body{
+    max-width: 100%;
+    overflow-x: hidden;
+    font-family: 'Nunito', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App{
+    display: flex;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.hero-section{
+    background-color: #caf0f8;
+    width: 60vw;
+    height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+#hero{
+    width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40vw;
+    overflow-y: hidden;
+}
+
+.title{
+    font-size: 48px;
+    font-weight: 800;
+    margin: 30px 0px;
+    align-self: center;
+    color: #7209b7;
+}
+
+.subtitle{
+    font-size: 18px;
+    font-weight: 500;
+    align-self: center;
+    line-height: 26px;
+    color: #adb5bd;
+}
+
+#sub{
+    margin-bottom: 60px;
+}
+
+@media (max-width: 1085px){
+    .hero-section{
+        width: 100%;
+    }
+    #hero{
+        height: 100vh;
+    }
+    .form-section{
+        width: 100%;
+    }
+}
+
+@media (max-width: 850px){
+    .hero-section{
+        display: none;
+    }
+}
+
+@media (max-width: 425px){
+   .form-section{
+       display: block;
+       margin: 0px 15px;
+   }
+   .title,
+   .subtitle{
+       text-align: center;
+   }
+   .subtitle{
+       padding: 0px 20px;
+   }
 }
